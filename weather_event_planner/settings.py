@@ -116,14 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
+'''STATICFILES_DIRS = [
     BASE_DIR / "static",
-]
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+]'''
 
+STATIC_ROOT = "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -132,6 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com',  # Add your Cloud9 URL here
+    'https://22dc7066eb6e48c19ced55ac9a7c7239.vfs.cloud9.eu-west-1.amazonaws.com',  
+    'http://weather-env.eba-6gfcrmgq.eu-west-1.elasticbeanstalk.com/',# Add your Cloud9 URL here
     # You can also add other origins if necessary
 ]
